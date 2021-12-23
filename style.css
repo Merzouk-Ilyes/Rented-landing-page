@@ -19,7 +19,7 @@ html {
   height: 13vh;
   width: 90vw;
   margin: auto;
-  padding: 0 5vw;
+  /* padding: 0 5vw; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +50,7 @@ html {
   transition: 1s;
 }
 .nav .nav_list ul li:hover:before {
-  width: 50%;
+  width: 60%;
 }
 .nav .nav_auth {
   height: 5vh;
