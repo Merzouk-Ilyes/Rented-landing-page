@@ -80,7 +80,7 @@ html {
   border-radius: var(--radius);
   display: flex;
   align-items: center;
-  border: .5px solid #2799f17a;
+  border: .1px solid #2799f128;
 }
 .home .home_img {
   width: 50vw;
@@ -167,7 +167,8 @@ html {
   position: relative;
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
-  border: .5px solid #2799f17a;
+  border: .1px solid #2799f128;
+  
   border-left: none;
 
 }
