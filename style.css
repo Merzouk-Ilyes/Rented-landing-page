@@ -17,12 +17,13 @@ html {
 /* ?nav start */
 .nav {
   height: 13vh;
-  width: 90vw;
+  width: 89vw;
   margin: auto;
-  /* padding: 0 5vw; */
+  padding: 0 5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* background-color: #279af1; */
 }
 .nav .nav_logo {
   height: 30vh;
@@ -79,6 +80,7 @@ html {
   border-radius: var(--radius);
   display: flex;
   align-items: center;
+  border: .5px solid #2799f17a;
 }
 .home .home_img {
   width: 50vw;
@@ -165,6 +167,9 @@ html {
   position: relative;
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
+  border: .5px solid #2799f17a;
+  border-left: none;
+
 }
 .about .about_sec1 .about_img {
   height: 60vh;
