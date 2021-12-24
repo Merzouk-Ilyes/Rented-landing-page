@@ -19,15 +19,15 @@ html {
   height: 13vh;
   width: 89vw;
   margin: auto;
-  padding: 0 5vw;
+  padding-right: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #279af1; */
 }
 .nav .nav_logo {
-  height: 30vh;
-  width: 15vw;
+  height: 250px;
+  /* width: 200px; */
+  /* background-color:rgba(0, 187, 255, 0.523) ; */
 }
 .nav .nav_logo img {
   height: 100%;
@@ -54,8 +54,8 @@ html {
   width: 60%;
 }
 .nav .nav_auth {
-  height: 5vh;
-  width: 10vw;
+  height: 2.5rem;
+  width: 9rem;
   background-color: var(--main-color);
   border-radius: var(--radius-btn-sm);
   cursor: pointer;
@@ -80,7 +80,7 @@ html {
   border-radius: var(--radius);
   display: flex;
   align-items: center;
-  border: .1px solid #2799f128;
+  border: 0.1px solid #2799f128;
 }
 .home .home_img {
   width: 50vw;
@@ -131,8 +131,8 @@ html {
 }
 .home .home_content .home_btns .home_btn_explore,
 .home .home_content .home_btns .home_btn_contact {
-  height: 10vh;
-  width: 15vw;
+  height: 9vh;
+  width: 13vw;
   background-color: var(--main-color);
   border-radius: var(--radius-btn);
   cursor: pointer;
@@ -167,10 +167,9 @@ html {
   position: relative;
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
-  border: .1px solid #2799f128;
-  
-  border-left: none;
+  border: 0.1px solid #2799f128;
 
+  border-left: none;
 }
 .about .about_sec1 .about_img {
   height: 60vh;
@@ -184,7 +183,7 @@ html {
 .about .about_sec1 .about_img img {
   height: 100%;
   width: 100%;
-  border-radius: var(--radius);
+  border-radius: var(--radius-btn);
 }
 .about .about_sec1 p {
   font-size: 1.1rem;
