@@ -356,7 +356,7 @@ html {
   background-color: #fff;
   height: 12vh;
   width: 18vw;
-  z-index: 222;
+  z-index: 2;
   bottom: 10px;
   right: -40px;
   display: flex;
