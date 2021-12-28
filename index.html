@@ -5,8 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>home page</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
   </head>
   <body>
+    <!-- ?Model start -->
+    <div class="modal">
+      <div class="overlay"></div>
+      <div class="main-popup">
+        <div class="popup-header">
+          <div id="popup-close-button"><a href="#"></a></div>
+          <ul>
+            <li><a href="#" id="sign-in">Log in</a></li>
+            <li><a href="#" id="register">Register</a></li>
+          </ul>
+        </div>
+
+        <div class="popup-content">
+          <form action="#" class="sign-in">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Email" />
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Password" />
+
+            <input type="submit" id="submit" value="Log in" />
+          </form>
+
+          <form action="#" class="register">
+            <label for="name-register">Name:</label>
+            <input type="text" id="name-register" placeholder="Name" />
+            <label for="email-register">Email:</label>
+            <input type="email" id="email-register" placeholder="Email" />
+            <label for="password-register">Password:</label>
+            <input
+              type="password"
+              id="password-register"
+              placeholder="Password"
+            />
+            <label for="password-confirmation">Confirm Password:</label>
+            <input
+              type="password"
+              id="password-confirmation"
+              placeholder="Confirm Password"
+            />
+
+            <input type="submit" id="submit2" value="Create Account" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- !Modal End -->
     <!-- ?navbar start -->
     <div class="nav">
       <div class="nav_logo">
@@ -19,14 +67,17 @@
           <li>Agents</li>
         </ul>
       </div>
-      <div class="nav_auth">Become a Host</div>
+      <div class="nav_auth" id="become_host">Become a Host</div>
     </div>
     <!-- !navbar end -->
     <!-- ?home page start -->
     <div class="home">
       <div class="home_content">
+
         <span class="block"></span>
         <h1>
+        <!-- <i class="fi fi-rr-eye"></i>
+        <i class="fi fi-rr-eye-crossed"></i> -->
           Easy way to find <br />
           the <span>Perfect</span> property
         </h1>
@@ -184,10 +235,15 @@
           </div>
         </div>
       </div>
-      <div class="footer_desc">
-        copyright &copy; 2021 , Crafted with love
-      </div>
+      <div class="footer_desc">copyright &copy; 2021 , Crafted with love</div>
     </div>
     <!-- !footer end -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="modal.js"></script>
   </body>
 </html>

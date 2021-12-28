@@ -1,0 +1,213 @@
+.modal .overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal .overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal .main-popup {
+  position: fixed;
+  left: 30vw;
+  top: 8vh;
+  margin: 0;
+  width: 30vw;
+  height: 55vh;
+  background-color: #fff;
+  border-radius: 25px;
+  z-index: 15;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+  /*overflow: hidden;*/
+}
+
+.modal .main-popup.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.modal .popup-header {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 62px;
+  width: 100%;
+  background-color: pink;
+  border-radius: 25px 25px 0 0;
+}
+
+#popup-close-button a {
+  position: absolute;
+  right: 10px;
+  top: -30px;
+  width: 22px;
+  height: 22px;
+}
+
+#popup-close-button a::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 3px;
+  height: 25px;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#popup-close-button a::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 3px;
+  height: 25px;
+  background-color: #fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.modal .popup-header ul {
+  margin: 0;
+  padding: 0;
+}
+
+.modal .popup-header ul li {
+  text-align: center;
+  list-style: none;
+  width: 50%;
+  float: left;
+}
+
+.modal .popup-header ul li a {
+  display: block;
+  padding: 17px 0;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+#sign-in {
+    background-color: var(--main-color);
+  color: #fff;
+ 
+  border-radius: 25px 0 0 0;
+}
+
+#sign-in.active {
+    background-color: #fff;
+    color: var(--main-color);
+  
+  /* border-radius: 1rem; */
+}
+
+#register {
+    background-color: var(--main-color);
+    color: #fff;
+  border-radius: 0 25px 0 0;
+}
+
+#register.active {
+  
+  background-color: #fff;
+  color: var(--main-color);
+}
+
+.modal .popup-content {
+  height: 80%;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 2rem 1rem;
+
+  /* background-color: yellow; */
+}
+
+.modal form.sign-in,
+.modal form.register {
+  /* margin: 2rem auto; */
+  /* margin-top: 1rem; */
+  /* background-color: pink; */
+  font-size: 1em;
+  opacity: 1;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.modal form.sign-in.move-left {
+  opacity: 0;
+  transform: translateX(-450px);
+}
+
+.modal form label {
+  font-size: 1rem;
+  color: var(--main-color);
+  margin-left: 1.5vw;
+}
+
+.modal form.sign-in input,
+.modal form.register input {
+  border-radius: var(--radius-btn);
+  width: 90%;
+  height: 50px;
+  margin: 0 auto 15px auto;
+  padding: 10px 10px 10px 15px;
+  font-size: 1em;
+  color: #000;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.214);
+  display: block;
+  
+}
+.modal form.register {
+  
+  position: absolute;
+  width: 83%;
+
+  transform: translateX(450px);
+  opacity: 0;
+}
+.modal input#submit ,.modal input#submit2 {
+  background-color: var(--main-color);
+  color: #fff;
+  height: 50px;
+  width: 90%;
+  margin: 3rem auto;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  border-radius: var(--radius-btn);
+  font-size: 1em;
+  border: none;
+  box-shadow: #414e5844 0px 8px 20px;
+
+}
+
+.modal form.register.move-left {
+  opacity: 1;
+  transform: translateX(0);
+  /* margin-top: -20rem; */
+  top: 6rem;
+}

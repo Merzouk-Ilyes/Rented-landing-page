@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="modal.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button>Click Here</button>
+    </div>
+    <div class="overlay"></div>
+    <div class="main-popup">
+      <div class="popup-header">
+        <div id="popup-close-button"><a href="#"></a></div>
+        <ul>
+          <li><a href="#" id="sign-in">login</a></li>
+          <li><a href="#" id="register">Register</a></li>
+        </ul>
+      </div>
+      <!--.popup-header-->
+      <div class="popup-content">
+        <form action="#" class="sign-in">
+          <label for="email">Email:</label>
+          <input type="text" id="email" />
+          <label for="password">Password:</label>
+          <input type="password" id="password" />
+          
+          <input type="submit" id="submit1" value="Login" />
+        </form>
+
+        <form action="#" class="register">
+          <label for="email-register">Email:</label>
+          <input type="text" id="email-register" />
+          <label for="password-register">Password:</label>
+          <input type="password" id="password-register" />
+          <label for="password-confirmation">Confirm Password:</label>
+          <input type="password-confirmation" id="password-confirmation" />
+          
+          <input type="submit" id="submit2" value="Create Account" />
+        </form>
+      </div>
+      <!--.popup-content-->
+    </div>
+    <!--.main-popup-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="modal.js"></script>
+  </body>
+</html>

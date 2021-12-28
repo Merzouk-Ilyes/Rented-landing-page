@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
 :root {
   --main-color: #279af1;
   --accent-color: #2799f111;
   --radius: 2.5rem;
-  --radius-btn: 1rem;
-  --radius-btn-sm: 0.7rem;
+  --radius-btn: 15px;
   --shadow: #2799f144 0px 8px 20px;
 }
 
@@ -68,7 +68,7 @@ html {
   height: 2.5rem;
   width: 9rem;
   background-color: var(--main-color);
-  border-radius: var(--radius-btn-sm);
+  border-radius: var(--radius-btn);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -529,7 +529,7 @@ html {
   animation: none;
   height: 7vh;
   width: 15vw;
-  border-radius: 0.7rem;
+  border-radius: var(--radius-btn);
   box-shadow: none;
   margin: 2rem 0;
   font-size: 1.1rem;
@@ -580,7 +580,7 @@ html {
 .footer_link .footer_sec4 p:first-of-type {
   font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 .footer_link .footer_sec2 p,
 .footer_link .footer_sec3 p {
@@ -590,12 +590,15 @@ html {
 
 .footer_link .footer_sec4 .socials{
   display: flex;
+  flex-direction: column;
+  
   
 }
 .footer_link .footer_sec4 .socials img{
  height: 25px;
  width: 25px;
- margin-right: 10px;
+ margin-left: 15px;
+ margin-bottom: 10px;
  
 }
 .footer_desc {
