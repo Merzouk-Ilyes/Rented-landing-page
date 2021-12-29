@@ -21,6 +21,9 @@ $(function () {
     $formSignIn.css({
       display: "none",
     });
+    $mainPopUp.css({
+      height:"490px"
+    })
   });
   $overlay.on("click", function () {
     $(this).removeClass("visible");
@@ -42,7 +45,7 @@ $(function () {
       display: "block",
     });
     $mainPopUp.css({
-      height:"400px"
+      height:"370px"
     })
   });
 
@@ -56,7 +59,7 @@ $(function () {
       display: "none",
     });
     $mainPopUp.css({
-      height:"450px"
+      height:"490px"
     })
   });
 

@@ -23,21 +23,21 @@
   /* transform : translate(-50%, -50%); */
   /* margin: 0 auto; */
   width: 400px;
-  height: 450px;
+  height: 500px;
   background-color: #fff;
   border-radius: var(--radius-btn);
   z-index: 15;
   opacity: 0;
   display: none;
   
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
   /*overflow: hidden;*/
 }
 
 .modal .main-popup.visible {
   opacity: 1;
   display: block;
-  transform: translateY(10px);
+  transform: translateY(5px);
   transition: all 0.3s ease;
 }
 
@@ -169,7 +169,7 @@
   height: 50px;
   width: 100%;
   padding: 0;
-  margin: 2rem auto;
+  margin: 1rem auto;
   cursor: pointer;
   outline: none;
   border-radius: var(--radius-btn);
