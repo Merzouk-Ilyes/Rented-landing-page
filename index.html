@@ -6,7 +6,10 @@
     <title>home page</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="modal.css" />
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
   </head>
   <body>
     <!-- ?Model start -->
@@ -23,31 +26,58 @@
 
         <div class="popup-content">
           <form action="#" class="sign-in">
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Email" />
-            <label for="password">Password:</label>
-            <input type="password" id="password" placeholder="Password" />
+            <p class="title">Welcome back!</p>
+            <div class="form">
+              <input
+                type="text"
+                id="email"
+                class="form__input"
+                placeholder=" "
+              />
+              <label for="email" class="form__label">Email</label>
+            </div>
+            <div class="form">
+              <input
+                type="password"
+                id="password"
+                class="form__input"
+                placeholder=" "
+              />
+              <label for="password" class="form__label">Password</label>
+            </div>
 
             <input type="submit" id="submit" value="Log in" />
           </form>
 
           <form action="#" class="register">
-            <label for="name-register">Name:</label>
-            <input type="text" id="name-register" placeholder="Name" />
-            <label for="email-register">Email:</label>
-            <input type="email" id="email-register" placeholder="Email" />
-            <label for="password-register">Password:</label>
-            <input
-              type="password"
-              id="password-register"
-              placeholder="Password"
-            />
-            <label for="password-confirmation">Confirm Password:</label>
-            <input
-              type="password"
-              id="password-confirmation"
-              placeholder="Confirm Password"
-            />
+            <p class="title" >Welcome!</p>
+            <div class="form">
+              <input
+                type="text"
+                id="email_register"
+                class="form__input"
+                placeholder=" "
+              />
+              <label for="email" class="form__label">Email</label>
+            </div>
+            <div class="form">
+              <input
+                type="password"
+                id="password_register"
+                class="form__input"
+                placeholder=" "
+              />
+              <label for="password" class="form__label">Password</label>
+            </div>
+            <div class="form">
+              <input
+                type="password"
+                id="confirm_password"
+                class="form__input"
+                placeholder=" "
+              />
+              <label for="password" class="form__label">Confirm Password</label>
+            </div>
 
             <input type="submit" id="submit2" value="Create Account" />
           </form>
@@ -73,10 +103,9 @@
     <!-- ?home page start -->
     <div class="home">
       <div class="home_content">
-
         <span class="block"></span>
         <h1>
-        <!-- <i class="fi fi-rr-eye"></i>
+          <!-- <i class="fi fi-rr-eye"></i>
         <i class="fi fi-rr-eye-crossed"></i> -->
           Easy way to find <br />
           the <span>Perfect</span> property

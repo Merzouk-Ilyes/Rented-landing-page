@@ -17,25 +17,26 @@
 }
 
 .modal .main-popup {
-  position: fixed;
-  left: 30vw;
-  top: 8vh;
-  margin: 0;
-  width: 30vw;
-  height: 55vh;
+  position: absolute;
+  top: 50px;
+  left: 35%;
+  /* transform : translate(-50%, -50%); */
+  /* margin: 0 auto; */
+  width: 400px;
+  height: 450px;
   background-color: #fff;
-  border-radius: 25px;
+  border-radius: var(--radius-btn);
   z-index: 15;
   opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
+  display: none;
+  
   transition: all 0.3s ease;
   /*overflow: hidden;*/
 }
 
 .modal .main-popup.visible {
   opacity: 1;
-  visibility: visible;
+  display: block;
   transform: translateY(10px);
   transition: all 0.3s ease;
 }
@@ -47,7 +48,7 @@
   height: 62px;
   width: 100%;
   background-color: pink;
-  border-radius: 25px 25px 0 0;
+  border-radius: var(--radius-btn) var(--radius-btn) 0 0;
 }
 
 #popup-close-button a {
@@ -109,27 +110,23 @@
 }
 
 #sign-in {
-    background-color: var(--main-color);
+  background-color: var(--main-color);
   color: #fff;
- 
-  border-radius: 25px 0 0 0;
+  border-radius: var(--radius-btn) 0 0 0;
 }
 
 #sign-in.active {
-    background-color: #fff;
-    color: var(--main-color);
-  
-  /* border-radius: 1rem; */
+  background-color: #fff;
+  color: var(--main-color);
 }
 
 #register {
-    background-color: var(--main-color);
-    color: #fff;
-  border-radius: 0 25px 0 0;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 0 var(--radius-btn) 0 0;
 }
 
 #register.active {
-  
   background-color: #fff;
   color: var(--main-color);
 }
@@ -139,14 +136,18 @@
   width: 90%;
   margin: 1rem auto;
   padding: 2rem 1rem;
-
-  /* background-color: yellow; */
 }
+.modal .title {
+  font-size:1.3rem ;
+  letter-spacing:2px;
+  font-weight: 500;
+  font-style: italic;
+  
 
+}
 .modal form.sign-in,
 .modal form.register {
-  /* margin: 2rem auto; */
-  /* margin-top: 1rem; */
+  width: 100%;
   /* background-color: pink; */
   font-size: 1em;
   opacity: 1;
@@ -154,60 +155,78 @@
   -moz-transition: all 0.35s;
   -o-transition: all 0.35s;
   transition: all 0.35s;
+  display: none
 }
-
-.modal form.sign-in.move-left {
-  opacity: 0;
-  transform: translateX(-450px);
-}
-
-.modal form label {
-  font-size: 1rem;
-  color: var(--main-color);
-  margin-left: 1.5vw;
-}
-
-.modal form.sign-in input,
-.modal form.register input {
-  border-radius: var(--radius-btn);
-  width: 90%;
-  height: 50px;
-  margin: 0 auto 15px auto;
-  padding: 10px 10px 10px 15px;
-  font-size: 1em;
-  color: #000;
-  outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.214);
+.show{
   display: block;
-  
 }
-.modal form.register {
-  
-  position: absolute;
-  width: 83%;
 
-  transform: translateX(450px);
-  opacity: 0;
-}
-.modal input#submit ,.modal input#submit2 {
+.modal input#submit,
+.modal input#submit2 {
+  position: relative;
   background-color: var(--main-color);
   color: #fff;
   height: 50px;
-  width: 90%;
-  margin: 3rem auto;
+  width: 100%;
   padding: 0;
+  margin: 2rem auto;
   cursor: pointer;
   outline: none;
   border-radius: var(--radius-btn);
   font-size: 1em;
   border: none;
   box-shadow: #414e5844 0px 8px 20px;
-
 }
 
-.modal form.register.move-left {
-  opacity: 1;
-  transform: translateX(0);
-  /* margin-top: -20rem; */
-  top: 6rem;
+
+.form {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  margin: 10px auto;
+}
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e1e5ee;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: #000;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+  /* Change border when input focus*/
+}
+
+.form__input:focus {
+  border-color: var(--main-color);
+}
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 25%;
+  /* padding: 0 0.5rem; */
+  color: rgba(128, 128, 128, 0.685);
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  background-color: #fff;
+  z-index : -2;
+}
+
+/* 
+1. When the input is in the focus state
+reduce the size of the label and move upwards 
+
+2. Keep label state when content is in input field 
+*/
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+  z-index: 2;
 }
